@@ -39,7 +39,9 @@ class _ListViewPageState extends State<ListViewPage> {
                       itemCount: snapshot.data?.length,
                       itemBuilder: (contxt, i) {
                         var item = snapshot.data![i];
-                        return productListItem(item);
+                        return Padding(
+                            padding: const EdgeInsets.all(6.0),
+                            child: productListItem(item));
                       },
                     );
                   } else if (snapshot.hasError) {
