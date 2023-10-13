@@ -99,7 +99,6 @@ class _ListViewPageState extends State<ListViewPage> {
                       print('Eye button');
                       showModalBottomSheet<void>(
                         context: context,
-                        // isScrollControlled: true,
                         builder: (BuildContext context) {
                           return Wrap(
                             children: <Widget>[
@@ -131,63 +130,6 @@ class _ListViewPageState extends State<ListViewPage> {
     );
   }
 }
-
-// Widget productListItem(Products obj) {
-//   return Card(
-//     shape: RoundedRectangleBorder(
-//       borderRadius: BorderRadius.circular(8.0),
-//     ),
-//     child: Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       children: [
-//         ClipRRect(
-//           borderRadius: BorderRadius.only(
-//             topLeft: Radius.circular(8.0),
-//             topRight: Radius.circular(8.0),
-//           ),
-//           child: Image.network(
-//             obj.thumbnail ?? '',
-//             fit: BoxFit.cover,
-//           ),
-//         ),
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//           children: [
-//             Text(
-//               shortenName(obj.title, nameLimit: 20),
-//               style: TextStyle(fontWeight: FontWeight.bold),
-//             ),
-//             Row(
-//               children: [
-//                 Text(
-//                   obj.price.toString(),
-//                   style: TextStyle(fontWeight: FontWeight.bold),
-//                 ),
-//                 SizedBox(
-//                   width: 5, // Adjust the width to your desired spacing
-//                 ),
-//                 Text(
-//                   'USD',
-//                   style: TextStyle(fontWeight: FontWeight.bold),
-//                 ),
-//                 IconButton(
-//                   icon: const Icon(
-//                     Icons.remove_red_eye_sharp,
-//                     semanticLabel: 'eye',
-//                   ),
-//                   onPressed: () {
-//                     print('Eye button');
-//                   },
-//                 ),
-//               ],
-//             ),
-//           ],
-//         ),
-//         Text(obj.description ?? ''),
-//       ],
-//     ),
-//   );
-// }
 
 // taken from stack overflow
 String shortenName(String nameRaw, {int nameLimit = 10, bool addDots = false}) {
